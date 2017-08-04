@@ -116,18 +116,6 @@
              text("(Pressione 'enter' para jogar novamente)", 100, 200);            
           }
           
-    // Pontuação extra:
-       void pontos(){
-            float x, y, z = 10;
-            do{
-              x = random(640);
-              y = random(370);
-            }while(250<x && x<615 && 45<y && y<365);
-            pontosPosition = new PVector( x, y);
-            raio = z;
-            
-       }
-          
     // Draw:
        void  draw(){
             if ( z > 0){
@@ -158,10 +146,7 @@
                          if( (j % 30) == 0){
                              pontuacao += 1;
                          }
-                         if( (pontuacao % 50 ) == 0){
-                            pontos();
-                            ellipse(pontosPosition.x, pontosPosition.y, raio*2, raio*2);
-                         }
+              
                    }
                  }
             }
